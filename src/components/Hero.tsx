@@ -36,11 +36,11 @@ export const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-                Start Free Trial
+                Book a Meeting
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button size="lg" variant="outline">
-                Watch Demo
+                Order Now
               </Button>
             </div>
 
@@ -62,14 +62,20 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero image */}
+          {/* Hero video */}
           <div className="relative animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="absolute inset-0 bg-gradient-primary blur-3xl opacity-30 rounded-3xl" />
-            <img 
-              src={heroImage} 
-              alt="AI Chatbot Interface Dashboard"
-              className="relative rounded-3xl shadow-card border border-primary/20"
-            />
+            <div className="relative rounded-3xl shadow-card border border-primary/20 overflow-hidden aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="AI Chatbot Demo Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0"
+              />
+            </div>
           </div>
         </div>
       </div>
